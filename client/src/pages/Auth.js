@@ -15,7 +15,7 @@ export function Auth() {
 const Login = () => {
   const [username, setUsername] = useState("")
   const [password, setPassword] = useState("")
-  const [_, setCokkies] = useCookies(["Access_Token"])
+  const [_, setCokkies] = useCookies(["access_Token"])
   const navigate = useNavigate();
 
   const handleLogin = async (e) => {
@@ -26,7 +26,7 @@ const Login = () => {
         password,
       })
         .then((res) => {
-          setCokkies("Access_Token", res.data.token);
+          setCokkies("access_Token", res.data.token);
           window.localStorage.setItem("userID", res.data.userID);
           navigate("/")
         });
