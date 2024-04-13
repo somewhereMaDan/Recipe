@@ -17,7 +17,8 @@ app.use(cors());
 app.use("/auth", userRouter);
 app.use("/recipes", recipeRouter);
 
-mongoose.connect("mongodb+srv://root:root@recipes.73abpk5.mongodb.net/recipes?retryWrites=true&w=majority")
+// mongoose.connect("mongodb+srv://root:root@recipes.73abpk5.mongodb.net/recipes?retryWrites=true&w=majority")
+mongoose.connect("mongodb+srv://root:root@recipes.73abpk5.mongodb.net/recipes?retryWrites=true&w=majority&ssl=true")
 
 const db = mongoose.connection;
 
